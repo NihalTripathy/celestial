@@ -1,43 +1,97 @@
-/* styles/globals.scss */
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  background-color: #0b0c10;
+  color: #cfcfcf;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 a {
-  color: inherit;
+  color: #0d6efd;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.accent {
+  color: #0d6efd;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-dark {
+  background-color: #0f1017;
+}
+
+.section-light {
+  background-color: #131424;
+}
+
+footer {
+  background-color: #0b0c10;
+  color: #9fa6b2;
+}
+
+footer a {
+  color: #6c757d;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/*
+  Scroll reveal animations. Elements with the `.reveal` class
+  will fade and slide into view when the `.is-visible` class is
+  added (controlled via the useScrollReveal hook).
+*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* globals.scss or a header-specific stylesheet */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition:
+    transform 0.5s ease,
+    background-color 0.4s ease,
+    box-shadow 0.4s ease;
+  /* Start transparent; we'll darken on scroll */
+  background-color: rgb(60 62 67 / 70%)
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  transform: translateY(0);
+}
+
+.navbar-scrolled {
+  /* Solidify the background and add a shadow on scroll */
+  background-color: rgba(11, 12, 16, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
