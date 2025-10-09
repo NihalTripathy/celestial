@@ -1,0 +1,13 @@
+/* Example: customize theme colors BEFORE using Bootstrap */
+$primary: #6a5acd; // slate blue
+$secondary: #0ea5e9; // tailwind-ish cyan
+$border-radius: 0.75rem;
+
+@use "bootstrap/scss/bootstrap" with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $border-radius: $border-radius
+);
+
+/* Optional: your small tweaks after bootstrap */
+.btn-rounded { border-radius: 9999px; }
