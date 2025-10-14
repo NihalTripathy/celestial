@@ -36,7 +36,7 @@ export default function LogoSmall({
         rendererSettings={{
           preserveAspectRatio: "xMidYMid meet",
         }}
-        style={{ width: size, height: size }}
+        style={{ width: 100, height: 100 }}
       />
     </div>
   );
