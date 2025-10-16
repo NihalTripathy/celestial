@@ -16,10 +16,10 @@ const HeroSection: FC = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         overflow: "hidden",
-        zIndex: 1,
+        zIndex: 0,
       }}
     >
-      <CyberBackground style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }} />
+      <CyberBackground  />
       <div
         className="container h-100 d-flex flex-column justify-content-between align-items-center"
         style={{ position: "relative", zIndex: 2, maxWidth: "900px" }}

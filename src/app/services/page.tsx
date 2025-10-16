@@ -15,6 +15,9 @@ export const metadata = {
     description:
       "Intelligent, proactive, and human-centered cybersecurity solutions built to protect your digital universe.",
   },
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 // ✅ Render the client part (animations, interactivity)

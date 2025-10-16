@@ -17,6 +17,9 @@ export const metadata = {
     description:
       "Learn more about Celestia Security—our mission, values and commitment to protecting your digital universe.",
   },
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {
